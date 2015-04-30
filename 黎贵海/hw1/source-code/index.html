@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>环形按钮</title>
+    <meta charset="utf-8">
+    <link rel="icon" sizes="196x196" href="assets/images/favicon.png">
+    <style type="text/css">
+         
+        #at-plus-container
+        {
+            width:30px;
+            margin:auto;
+        }
+        #bottom-positioner
+        {
+            position:fixed;
+            bottom:100px;
+        }
+        
+        #button
+        {
+            position:absolute;
+            left:0;
+            top:0;
+            width:30px;
+            height:30px;
+            cursor:pointer;
+            border-radius:50%;
+             transition: all 0.4s ease;
+            -webkit-transition: all 0.4s ease;
+            
+        }
+        #button:hover
+        {
+           
+            width: 200px;
+            height: 200px;
+            left: -90px;
+            top: -100px;
+            z-index: -1;
+        }
+        #button ul
+        {
+             list-style:none;
+        }
+        #info-bar
+        {
+            width:30px;
+            height:30px;
+            left:0;
+            top:0;
+            position: absolute;
+            border-radius:50%;
+            background:url("atplus_white.png") #999 no-repeat center center;
+             transition: all 0.4s ease;
+            -webkit-transition: all 0.4s ease;
+        }
+        #button:hover  #info-bar ul li
+        {
+            z-index:0;
+        }
+     #button:hover  #info-bar
+        {  
+            top: 65px;
+            left: 70px;
+            width:70px;
+            height:70px;
+            background:url("atplus_green.png") #3B3BD8 no-repeat center center;
+        }
+     /*   #info-bar:hover   .info
+        {
+            width:128px;
+            height:128px;
+            
+        }*/
+        
+        .info
+        {
+            width:30px;
+            height:30px;
+            border-radius: 50%;
+            transition: all 0.4s ease;
+            -webkit-transition: all 0.4s ease;
+            position:absolute;
+            top:0;
+            left:0;
+        }
+        .info ul li
+        {
+             transition: all 0.4s ease;
+            -webkit-transition: all 0.4s ease;
+            position: absolute;
+            left: 3px;
+            top: 3px;
+            z-index:-1
+        }
+         .info ul li span
+         {
+            position: absolute;
+            top:0;
+            left: 15px;
+             transition: all 0.4s ease;
+            -webkit-transition: all 0.4s ease;
+        }
+        .user
+        {
+            font-size:16px;
+            color:#fff;
+            font-weight:bold;
+            font-family:微软雅黑;
+        }
+        .comment
+        {
+            font-size:20px;
+            color:#fff;
+            font-weight:800;
+            font-family:微软雅黑;
+        }
+        
+        
+        #control-ring-container
+        {
+            width:30px;
+            height:30px;
+            border-radius: 50%;
+            cursor:pointer;
+            position:absolute;
+            top:-16px;
+            left:1px;
+        }
+         #control-ring-container li span
+        {
+            position:absolute;
+            left:20px;    
+            
+        }
+      #button:hover  .button
+      {
+            width:30px;
+            height:30px;      
+    }
+       #button:hover  .info
+        {
+            width:128px;
+            height:128px;
+            top:-150px;
+            left:-30px;
+            
+            background:#7E7E7E;
+        }
+        #button:hover .info ul li.user
+        {
+            left: 40px;
+            top: 10px;
+        }
+        #button:hover .info ul li.user span
+        {
+            left: 25px;
+        }
+        
+        #button:hover .info ul li.comment
+        {
+            left: 40px;
+            top: 40px;
+        }
+        #button:hover .info ul li.comment span
+        {
+            top: -10px;
+            font-size: 30px;
+            left: 30px;
+        }
+        #button:hover .info ul li.posted
+        {
+            top:80px;
+            left:20px;
+            
+        }
+        #button:hover .info ul li.posted span
+        {
+            left:30px;
+            font-weight:bold;
+			font-size: 20px;
+			color:#079E6E
+        }
+        #button:hover .info ul li.like
+        {
+            top:80px;
+            left:70px;    
+        }
+        #button:hover .info ul li.like span
+        {
+            left:35px;
+            font-weight:bold;
+			font-size: 20px;
+			color:#079E6E
+        }
+        #button:hover  .mask  
+            left:50px;
+            top:45px;
+        }
+         #button:hover   .history  
+         {
+            left: 35px;
+top: 90px;
+        }
+         #button:hover   .message  
+         {
+            left: 45px;
+top: 140px;
+        }
+         #button:hover  .setting  
+         {
+            left: 80px;
+            top: 173px;
+        }
+         #button:hover   .sign  
+         {
+            left: 130px;
+            top: 178px;
+        }
+         #control-ring  
+        {
+            left: -36px;
+            position: relative;
+            top: -12px;
+            z-index: -5;
+            cursor:pointer;
+        }
+        .button
+        {  
+            background:#6A6A6A;   
+            cursor:pointer;
+            border-radius:50%;
+            position:absolute;
+            -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+            left:36px;
+            top:15px;
+            width:26px;
+            height:26px;
+        }
+      #button:hover .unread
+      {
+        background: #EC0404;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        text-align: center;
+        font-family:@微软雅黑;
+        top: -5px;
+    font-weight: 900;
+    color: #fff;
+    font-size: 14px;
+        }
+        
+        .mask   
+        {
+            background:url("mask.png")  #7E7E7E no-repeat center center;
+        }
+        .history
+        {
+            background:url("history.png") #7E7E7E no-repeat center center;
+        }
+        .message
+        {
+            background:url("message.png") #7E7E7E no-repeat center center;
+        }
+        .setting
+        {
+            background:url("setting.png") #7E7E7E  no-repeat center center; no-repeat center center;
+        }
+		.sign
+        {
+            background:url("signin.png") #7E7E7E no-repeat center center;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <div id="at-plus-container">
+      <div id="bottom-positioner">
+        <div id="button">
+          <div id="info-bar">
+            <div style="display:block" class="info">
+              <ul>
+                <li title="14人参与讨论" class="page user"><img src="assets/images/people.png"><span>14</span></li>
+                <li title="20条评论" class="page comment"><img src="assets/images/comment.png"><span>20</span></li>
+                <li title="我有6条评论" class="mine posted"><img src="assets/images/post.png"><span>6</span></li>
+                <li title="被赞6次" class="mine like"><img src="assets/images/like.png"><span>6</span></li>
+              </ul>
+            </div>
+          </div>
+          <div id="control-ring-container">
+            <ul id="control-ring">
+              <li title="蒙板" class="mask button"></li>
+              <li title="历史记录" class="history button"></li>
+              <li title="消息" class="message button"><span class="unread">2</span></li>
+              <li title="设置" class="setting button"></li>
+              <li title="登录/注册" class="sign button"></li>
+            </ul>
+          </div>
+          <div class="apb">
+            <div class="icon"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+  </body>
+</html>

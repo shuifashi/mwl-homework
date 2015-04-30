@@ -1,0 +1,37 @@
+table{border: 1px solid gray;
+    margin: 0;
+    padding: 3px;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even){
+    background-color: #DEDEDE;
+}
+
+tbody > tr > td {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+thead > tr > th {
+	    text-align: left;
+    background-color: #041A7F;
+    color: white;
+    font-weight:  bold;
+    padding-right:16px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.ascend {
+    background-image: url("ascend.png");
+	background-color: #A4B0FC;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.descend {
+    background-image: url("descend.png");
+	background-color: #A4B0FC;
+    background-position: right;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,80 @@
+h1, h2 {
+	font-family: Garamond, "Times New Roman", Serif;
+	font-weight: 900;
+	text-shadow: 0px 0px 0px rgba(0,0,0,0.3); 
+}
+
+h1 {
+	font-size: 25px;
+}
+
+h2 {
+	font-size: 23px;
+}
+
+#todo {
+    width: 460px;
+}
+#staff {
+	width: 410px;
+}
+
+table {
+	text-align: left;
+	border-collapse: collapse;
+	border: 1px solid #BDBABA;
+	text-shadow: 0px 0px 0px rgba(0,0,0,1);
+}
+
+th, td {
+	padding: 1px;
+	padding-left: 4px;
+	border: 1px solid #BDBABA;
+}
+
+th {
+	background: #031A80;
+	color: white;
+	font-weight: bold;
+	font-family: "Verdana";
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+td {
+	font-weight: 550;
+	background: white;
+}
+
+table tr:nth-child(even) td{
+    background: #DDDDDD;
+}
+table tr:nth-child(odd) td{
+    background: white;
+}
+
+
+.UpSort {
+	background-color: #A3AFFC;
+	background-image: url(Img/ascend.png);
+}
+.DownSort {
+	background-color: #A3AFFC;
+	background-image: url(Img/descend.png);
+}
+.NoSort {
+	background-color: #031A80;
+}
+
+.hidden {
+	display: none;
+}
+
+input {
+	width: 180px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+
+strong{color: blue}

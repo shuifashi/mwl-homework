@@ -1,0 +1,87 @@
+<html>
+<head>
+<script type="text/javascript">
+//prototype原型关键字,为一个JS原对象扩展一个方法
+        window.onload = function() {
+
+  //定义基类构造函数
+  function Base(value) {
+  //基类实例变量
+    this.instanceVariable = value;
+  }
+  //定义基类实例方法
+  Base.prototype.instanceMethod = function() {
+    document.write("This is from Base class instance-method, instance-variable is: " + this.instanceVariable+"<br>");
+  };
+  //定义基类静态属性
+  Base.staticVariable = 'Base';
+  //定义基类静态方法
+  Base.staticMethod = function() {
+    document.write("This is from Base class static-method, static-variable is: " + this.staticVariable+"<br>");
+  };
+  
+
+  //定义继承类构造函数
+  function Derived(value) {
+  //继承类实例变量
+    this.instanceVariable = value;
+  }
+  //定义继承类实例方法
+  Derived.prototype.instanceMethod = function() {
+    document.write("This is from Derived class instance-method, instance-variable is: " + this.instanceVariable+"<br>");
+  };
+
+  //继承类静态变量
+  Derived.staticVariable = 'Derived';
+  //继承类静态方法
+  Derived.staticMethod = function() {
+    document.write("This is from Derived class instance-method, instance-variable is: " + this.staticVariable+"<br>");
+  };
+  
+  //继承函数
+  function extend(base, derived){
+  var Derived = function() {   //用于储存base以及derived中的实例成员变量
+    var baseInstance = base.apply(this, arguments);
+    var derivedInstance = derived.apply(this, arguments);
+  }
+   //将base和derived的静态方法与成员变量添加到Derived中
+  addProperty(Derived, base);  
+  addProperty(Derived, derived);
+   //将动态方法添加到Derived中
+  addProperty(Derived.prototype, base.prototype);  
+  addProperty(Derived.prototype, derived.prototype);
+  return Derived;
+ }
+
+
+ function addProperty(origin, source){
+  for (var index in source) {
+    if (typeof source[index] === 'function') {   //遍历source，找到其中的成员方法
+      if (typeof origin[index] === 'function')
+        var oldFn = origin[index];
+      origin[index] = function(){   //复写origin中的成员方法
+        if (!!oldFn) oldFn.apply(this, arguments);   //若原本已有成员方法，则先执行原有方法，再执行继承的方法
+        source[index].apply(this, arguments);
+      }
+    } else {
+      origin[index] = source[index];   //继承原有静态成员变量
+    }
+  }
+ }
+
+  Derived = extend(Base, Derived);
+  example = new Derived('example');
+  Derived.staticMethod();
+  example.instanceMethod();
+
+  example = new Derived('example');
+  otherExample = new Derived('other-example');
+  Derived.staticMethod();
+  example.instanceMethod();
+  otherExample.instanceMethod();
+
+}
+</script>
+</head>
+<body></body>
+</html>

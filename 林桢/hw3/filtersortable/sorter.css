@@ -1,0 +1,51 @@
+#todo{
+	border:1px solid #BFBFBF;
+	border-spacing: 0px;
+	font-family: serif;
+}
+#todo thead{
+	color:white;
+	text-align:left;
+	background-color: #021C7D;
+}
+#todo td{
+	border:1px solid #BFBFBF;
+}
+#staff{
+	border:1px solid #BFBFBF;
+	border-spacing: 0px;
+	font-family: serif;
+}
+#staff thead{
+	color:white;
+	text-align:left;
+	background-color: #021C7D;
+}
+#staff td{
+	border:1px solid #BFBFBF;
+}
+th{
+	padding-right: 30px;
+}
+.oddRow{
+	background-color: white;
+}
+.evenRow{
+	background-color: gainsboro;
+}
+.ascend{
+	background-color: lightskyblue;
+	background-image: url("ascend.png");
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+.descend{
+	background-color: lightskyblue;
+	background-image: url("descend.png");
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+.highLight{
+	font-weight: bolder;
+	color: red;
+}

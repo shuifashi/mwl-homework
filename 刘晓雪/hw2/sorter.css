@@ -1,0 +1,28 @@
+table{
+	 border-collapse:collapse;
+}
+th,td{
+	border:1px solid gray;
+}
+th{
+	background-color: #000079;
+	color:white;
+	text-align: left;
+	cursor: pointer;
+	padding-right: 20px;
+}
+.alternate{
+	background-color:	#BEBEBE;
+}
+.asort{
+	background-color: #CA8EFF;
+	background-image:url(ascend.png);
+	background-repeat:no-repeat;
+	background-position: right;
+}
+.dsort{
+	background-color: #CA8EFF;
+	background-image:url(descend.png);
+	background-repeat:no-repeat;
+	background-position: right;
+}

@@ -1,0 +1,57 @@
+<html>
+<head>
+<script type="text/javascript">
+	function  Base(instanceVariable){
+		this.instanceVariable = instanceVariable;
+	}
+	Base.staticVariable = 'Base';
+	Base.staticMethod = function(){
+		console.log("This is from Base class static-method, static-variable is: " + this.staticVariable);
+	} 
+	Base.prototype.instanceMethod = function(){
+		console.log("This is from Base class instance-method, static-variable is: " + this.instanceVariable);
+	}
+
+	function  Derived(instanceVariable) {
+		this.instanceVariable = instanceVariable;
+	}
+	Derived.staticVariable = 'Derived';
+	Derived.staticMethod = function(){
+		console.log("This is from Derived class static-method, static-variable is: " + this.staticVariable);
+	}
+	Derived.prototype.instanceMethod = function(){
+		console.log("This is from Derived class instance-method, static-variable is: " + this.instanceVariable);
+	}
+	
+	function extend(base,derived){
+		var Derived = function(){
+			baseInstance = base.apply(this,arguments);
+			derivedInstance = derived.apply(this,arguments);
+		}
+		addP(Derived,base);
+		addP(Derived,derived);
+		addP(Derived.prototype,base.prototype);
+		addP(Derived.prototype,derived.prototype);
+		return Derived; 
+	}
+	function addP(target,source){
+		for (var p in source) {
+	       	if(typeof source[p] === 'function'){
+	       		if(typeof target[p] === 'function')
+	       			var oldFn = target[p];
+	       		target[p] = function()
+	       			{if(!!oldFn)	oldFn.apply(this,arguments);
+	       				source[p].apply(this, arguments);}
+					       	
+			}
+	       	else
+	       		target[p] = source[p];
+	    }
+	    return target;
+	}
+
+	Derived = extend(Base,Derived);
+
+</script>
+</head>
+</html>

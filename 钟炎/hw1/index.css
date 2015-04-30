@@ -1,0 +1,225 @@
+﻿li {
+	list-style-type: none;
+	position: absolute;
+}
+span {
+	position: absolute;
+}
+#bottom-positioner {
+	left: 40%;
+	top: 25%;
+	width: 300px;
+	height: 500px;
+	position: absolute
+}
+
+
+.info {
+	border-radius: 50%;
+	background-color: white;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 48%;
+	top: 60%;
+	font-weight:900;
+	visibility: hidden;
+	transition: left 0.4s, top 0.4s, width 0.4s, height 0.4s, visibility 0.2s, background-color 0.4s;
+	-moz-transition: left 0.4s, top 0.4s, width 0.4s, height 0.4s, visibility 0.2s, background-color 0.4s;
+	-o-transition: left 0.4s, top 0.4s, width 0.4s, height 0.4s, visibility 0.2s, background-color 0.4s;
+	-webkit-transition: left 0.4s, top 0.4s, width 0.4s, height 0.4s, visibility 0.2s, background-color 0.4s;
+}
+
+#button:hover .info {
+	width: 150px;
+	height: 150px;
+	left: 100px;
+	top: 120px;
+	font-weight:900;
+	background-color: gray;
+	visibility: visible;
+}
+
+
+.user {
+	left : 16%;
+	top: 0px;
+	font-size: 20px;
+	color:white;
+	position: relative;
+	}
+
+.comment{
+		left :16%;
+		top: 10%;
+		font-size: 40px;
+		color:white;
+		position: relative;
+	}
+
+.posted{
+		left : 25%;
+		top: 70%;
+		font-size: 20px;
+		color:lightgreen;
+		position: absolute;
+	}
+
+.like{
+		left : 60%;
+		top: 70%;
+		font-size: 20px;
+		color:lightgreen;
+		position: absolute;
+	}
+
+
+.button {
+	width: 50px;
+	height: 50px;
+	left: 48%;
+	top: 60%;
+	border-radius: 50%;
+	background-color: blue;
+	visibility: hidden;
+	transition: left 0.4s, top 0.4s, visibility 0.4s, background-color 0.4s;
+	-moz-transition: left 0.4s, top 0.4s, visibility 0.4s, background-color 0.4s;
+	-o-transition: left 0.4s, top 0.4s, visibility 0.4s, background-color 0.4s;
+	-webkit-transition: left 0.4s, top 0.4s, visibility 0.4s, background-color 0.4s;
+}
+
+
+.icon {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: gray;
+	background-image: url("assets/images/atplus_white.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	left: 48%;
+	top: 60%;
+	transition: width 0.5s, height 0.5s, background-color 1s;
+	-moz-transition: width 0.5s, height 0.5s, background-color 1s;
+	-o-transition: width 0.5s, height 0.5s, background-color 1s;
+	-webkit-transition: width 0.5s, height 0.5s, background-color 1s;
+}
+#button:hover .icon {
+	width: 70px;
+	height: 70px;
+	background-color: blue;
+	background-image: url("assets/images/atplus_green.png");
+	background-size: 70%;
+}
+
+/*五个功能键的基本css*/
+.mask{
+
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-image: url("assets/images/mask.png");
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.history{
+
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-image: url("assets/images/history.png");
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.message{
+
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-image: url("assets/images/message.png");
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.setting{
+
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-image: url("assets/images/setting.png");
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.sign{
+
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-image: url("assets/images/signin.png");
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+#button:hover .button {
+	visibility: visible;
+}
+
+#button:hover {
+	width: 300px;
+	height: 440px;
+}
+
+
+/*五个功能键的动态css*/
+#button:hover .mask {
+	visibility: visible;
+	background-color: gray;
+	left: 28%;
+	top: 50%;
+}
+#button:hover .history {
+	visibility: visible;
+	background-color: gray;
+	left: 24%;
+	top: 61%;
+}
+#button:hover .message {
+	visibility: visible;
+	background-color: gray;
+	left: 28%;
+	top: 72%;
+}
+#button:hover .setting {
+	visibility: visible;
+	background-color: gray;
+	left: 46%;
+	top: 78%;
+}
+#button:hover .sign {
+	visibility: visible;
+	background-color: gray;
+	left: 66%;
+	top: 78%;
+}
+
+
+.unread {
+	color: white;
+	background-color: red;
+	
+	border-radius: 10px;
+	width: 20px;
+	height: 20px;
+	
+	float: right ;
+	position: absolute;
+	
+	text-align: center;
+	font-size: 10px;
+	}

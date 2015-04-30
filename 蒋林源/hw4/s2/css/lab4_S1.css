@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0
+
+}
+ul li {
+    list-style: none;
+    text-align: center;
+}
+#at-plus-container {
+	width: 300px;
+	position: fixed;
+	bottom: 200px;
+	left: 40%;
+}
+#bottom-positioner {
+	width: 300px;
+	height: 150px;
+}
+#button {
+	margin-left: 40%;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	transition: all 1s;
+}
+
+.apb {
+	background-color: #585858;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background-image: url("../assets/images/atplus_white.png");
+	background-repeat: no-repeat;
+	background-position: 3px 7px;
+	background-size: 80%;
+	opacity: .4;
+
+	position: absolute;
+	top: 45px;
+	left: 48%;
+
+	-webkit-transition: all .6s .3s;
+	-moz-transition: all .6s .3s;
+	transition: all .6s .3s;
+}
+.mask, .history, .message, .setting, .sign {
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: 7px 8px;
+	background-color: rgba(	135,206,235 , .8);
+
+	opacity: 0;
+	
+	position: absolute;
+	top: 45px;
+	left: 48%;
+
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	transition: all 1s;
+}
+.unread {
+	font-size: 10px;
+    position: absolute;
+    top: -4px;
+    right: -6px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    background-color: red;
+}
+#control-ring img {
+	display: block;
+	width: 50%;
+	padding: 7px 0 0 8px;
+}
+#info-bar {
+	color: #11a952;
+	text-align: center;
+	font-size: 25px;
+	width: 30px;
+	height: 30px;
+	border-radius: 55px;
+	opacity: 0;
+	font-weight: bold;
+	position: absolute;
+	top: 45px;
+	left: 48%;
+	overflow: hidden;
+	-webkit-transition: all 1s;
+		-moz-transition: all 1s;
+			transition: all 1s;
+}
+
+#button:hover {
+	width: 300px;
+	height: 150px;
+	margin: 0 auto;
+}
+#button:hover .apb {
+	background-color: rgba(48, 63, 159, 1);
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background-image: url("../assets/images/atplus_green.png");
+	background-repeat: no-repeat;
+	background-position: 8px 13px;
+	background-size: 70%;
+	opacity: .8;
+
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	transition: all 1s;
+}
+#button:hover #info-bar {
+	width: 110px;
+	height: 110px;
+	border-radius: 55px;
+	opacity: 1;
+	position: absolute;
+	top: -75px;
+	left: 38%;
+	line-height:110px;
+	cursor: pointer;
+}
+#button:hover .mask {
+	opacity: 1;
+	cursor: pointer;
+
+	position: absolute;
+	top: 19px;
+	left: 32%;
+}
+
+#button:hover .history {
+	opacity: 1;
+	cursor: pointer;
+
+	position: absolute;
+	top: 56px;
+	left: 29%;
+}
+
+#button:hover .message {
+	opacity: 1;
+	cursor: pointer;
+
+	position: absolute;
+	top: 92px;
+	left: 33%;
+}
+
+#button:hover .setting {
+	opacity: 1;
+	cursor: pointer;
+
+	position: absolute;
+	top: 110px;
+	left: 45%;
+}
+
+#button:hover .sign {
+	opacity: 1;
+	cursor: pointer;
+
+	position: absolute;
+	top: 108px;
+	left: 58%;
+}
+
+
+
+
+h3 {
+	color: #00CCCC;
+	font-size: 17px;
+	margin: 0;
+	padding-top: 4px;
+	font-family: Verdana;
+}
+.unseen {
+	display: none;
+}
+.disabled {
+	background-color: rgba(0,0,20,0.1);
+	pointer-events: none;
+}
+.enable {
+	background-color: rgba(	135,206,235 , .8);
+
+}
+
+#control-ring li:hover {background-color: rgba(0,0,20,0.7);}
